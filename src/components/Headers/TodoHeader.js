@@ -22,7 +22,7 @@ import { useState } from "react";
 import { Card, CardBody, CardTitle, Container, Row, Col,
           Form, FormGroup, Input, Button } from "reactstrap";
 
-const Header = () => {
+const TodoHeader = () => {
 
   const [job, setJob] = useState('')
   const [jobs, setJobs] = useState([])
@@ -63,76 +63,51 @@ const Header = () => {
                 </Row>
             </Form>
           </div>
-          <Row className="mb-4">
-              {jobs.map((job, index) => (
-                <Col className="mb-4" lg="6" xl="3" key={index}>
-                  <Card className="card-stats mb-4 mb-xl-0">
-                    <CardBody>
-                      <Row>
-                        <div className="col">
-                          <CardTitle
-                            tag="h5"
-                            className="text-uppercase text-muted mb-0"
-                          >
-                            {job}
-                          </CardTitle>
-                          {/* <span className="h2 font-weight-bold mb-0">
-                            350,897
-                          </span> */}
-                        </div>
-                        {/* <Col className="col-auto">
-                          <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-                            <i className="fas fa-chart-bar" />
-                          </div>
-                        </Col> */}
-                      </Row>
-                      <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fa fa-arrow-up" /> High
-                        </span>{" "}
-                        <span className="text-nowrap">Since last month</span>
-                      </p>
-                    </CardBody>
-                  </Card>
-                </Col>
-              ))}
-
-
-              <Col lg="6" xl="3">
-                <Card className="card-stats mb-4 mb-xl-0">
-                  <CardBody>
-                    <Row>
-                      <div className="col">
-                        <CardTitle
-                          tag="h5"
-                          className="text-uppercase text-muted mb-0"
-                        >
-                          Traffic
-                        </CardTitle>
-                        <span className="h2 font-weight-bold mb-0">
-                          350,897
-                        </span>
-                      </div>
-                      <Col className="col-auto">
-                        <div className="icon icon-shape bg-danger text-white rounded-circle shadow">
-                          <i className="fas fa-chart-bar" />
-                        </div>
-                      </Col>
-                    </Row>
-                    <p className="mt-3 mb-0 text-muted text-sm">
-                      <span className="text-success mr-2">
-                        <i className="fa fa-arrow-up" /> 3.48%
-                      </span>{" "}
-                      <span className="text-nowrap">Since last month</span>
-                    </p>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
         </Container>
+
+        {/* Waves Container */}
+        <div>
+          <svg
+            className="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            // xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shapeRendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g className="parallax">
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(255,255,255,0.7"
+              />
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <use
+                xlinkHref="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+        {/* Waves end */}
       </div>
     </>
   );
 };
 
-export default Header;
+export default TodoHeader;

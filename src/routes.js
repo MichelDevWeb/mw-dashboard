@@ -12,6 +12,7 @@ import {
   Exchanges,
   News,
 } from "views/crypto";
+import TodoList from "views/todo/TodoList";
 
 var routes = [
   {
@@ -63,7 +64,13 @@ var routes = [
     layout: "/crypto",
     isCrypto: true,
   },
-
+  {
+    path: "/todos",
+    name: "Todo List",
+    icon: "ni ni-bullet-list-67 text-green",
+    component: TodoList,
+    layout: "/admin",
+  },
   {
     path: "/icons",
     name: "Icons",
