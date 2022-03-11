@@ -1,0 +1,91 @@
+<Card className="bg-secondary shadow mb-3">
+          <CardHeader className="bg-white border-0">
+            <Row className="align-items-center">
+              <Col lg="6" xl="3">
+                <h3 className="mb-0">Latest Crypto News</h3>
+              </Col>
+              <Col className="text-right" xs="3">
+                {/* <h6 className="heading-small text-muted mb-4">
+                        User information
+                      </h6> */}
+                {/* <UncontrolledDropdown>
+                <DropdownToggle
+                  className="btn-icon-only text-light"
+                  href="#pablo"
+                  role="button"
+                  size="sm"
+                  color=""
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <i className="fas fa-ellipsis-h" />
+                </DropdownToggle>
+                <DropdownMenu className="dropdown-menu-arrow" right>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Action
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Another action
+                  </DropdownItem>
+                  <DropdownItem
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Something else here
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown> */}
+              </Col>
+            </Row>
+          </CardHeader>
+          <CardBody>
+            <Row>
+              <Col xs="8">
+                <p className="mb-4">
+                  Content 1
+                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </p>
+                <div className="align-items-center d-flex text-sm">
+                  <a
+                    className="avatar avatar-sm"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <img
+                      alt="..."
+                      className="rounded-circle"
+                      src={
+                        require("../../assets/img/theme/team-1-800x800.jpg")
+                          .default
+                      }
+                    />
+                  </a>
+
+                  <span className="post-info-dot">~</span>
+                  <span>Tue 12/07/2021</span>
+                  <span className="post-info-dot">~</span>
+                  <span>1m read</span>
+                </div>
+              </Col>
+              <Col className="text-right" xs="4">
+                <div className="thumnail-image">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      // className="rounded-circle"
+                      src={
+                        require("../../assets/img/theme/team-4-800x800.jpg")
+                          .default
+                      }
+                    />
+                  </a>
+                </div>
+              </Col>
+            </Row>
+          </CardBody>
+        </Card>
