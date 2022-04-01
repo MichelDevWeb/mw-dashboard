@@ -22,6 +22,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+        <Route path="/management" render={(props) => <AdminLayout {...props} />} />
 
         <Route path="/crypto" render={(props) => <CryptoLayout {...props} />} />
 

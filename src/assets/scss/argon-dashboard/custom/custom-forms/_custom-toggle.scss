@@ -15,6 +15,12 @@
              + .custom-toggle-slider {
                 border: $custom-control-indicator-border-width solid $custom-control-indicator-checked-border-color;
 
+                // &:after {
+                //     content: attr(data-label-on);
+                //     right: auto;
+                //     left: 0;
+                // }
+
                 &:before {
                     background: $custom-toggle-checked-bg;
                     transform: translateX(1.625rem);
@@ -40,6 +46,81 @@
     }
 }
 
+.custom-toggle-default {
+    input {
+        &:checked {
+            + .custom-toggle-slider {
+               border: $custom-control-indicator-border-width solid $custom-toggle-checked-default-bg;
+
+               &:before {
+                   background: $custom-toggle-checked-default-bg;
+                   transform: translateX(1.625rem);
+               }
+           }
+       }
+    }
+}
+
+.custom-toggle-danger {
+    input {
+        &:checked {
+            + .custom-toggle-slider {
+               border: $custom-control-indicator-border-width solid $custom-toggle-checked-danger-bg;
+
+               &:before {
+                   background: $custom-toggle-checked-danger-bg;
+                   transform: translateX(1.625rem);
+               }
+           }
+       }
+    }
+}
+
+.custom-toggle-warning {
+    input {
+        &:checked {
+            + .custom-toggle-slider {
+               border: $custom-control-indicator-border-width solid $custom-toggle-checked-warning-bg;
+
+               &:before {
+                   background: $custom-toggle-checked-warning-bg;
+                   transform: translateX(1.625rem);
+               }
+           }
+       }
+    }
+}
+
+.custom-toggle-success {
+    input {
+        &:checked {
+            + .custom-toggle-slider {
+               border: $custom-control-indicator-border-width solid $custom-toggle-checked-success-bg;
+
+               &:before {
+                   background: $custom-toggle-checked-success-bg;
+                   transform: translateX(1.625rem);
+               }
+           }
+       }
+    }
+}
+
+.custom-toggle-info {
+    input {
+        &:checked {
+            + .custom-toggle-slider {
+               border: $custom-control-indicator-border-width solid $custom-toggle-checked-info-bg;
+
+               &:before {
+                   background: $custom-toggle-checked-info-bg;
+                   transform: translateX(1.625rem);
+               }
+           }
+       }
+    }
+}
+
 .custom-toggle-slider {
     position: absolute;
     cursor: pointer;
@@ -51,6 +132,13 @@
     border-radius: 34px !important;
     background-color: transparent;
 
+    // &:after {
+    //     color: $custom-toggle-slider-bg;
+    //     margin: 0 0.21667rem;
+    //     content: attr(data-label-off);
+    //     top: 0;
+    //     right: 0;
+    // }
 
     &:before {
         position: absolute;

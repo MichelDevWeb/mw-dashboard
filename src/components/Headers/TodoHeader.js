@@ -27,8 +27,6 @@ const TodoHeader = () => {
   const [job, setJob] = useState('')
   const [jobs, setJobs] = useState([])
 
-  console.log(job);  
-
   const handleSubmit = () => {
     setJobs(pre => {
       console.log([...pre, job]);    

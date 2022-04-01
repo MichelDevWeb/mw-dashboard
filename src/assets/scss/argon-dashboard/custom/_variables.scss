@@ -631,6 +631,11 @@ $custom-checkbox-indicator-border-radius:       $border-radius-sm !default;
 $custom-toggle-width:           50px !default;
 $custom-toggle-slider-bg:       $gray-200 !default;
 $custom-toggle-checked-bg:      theme-color("primary") !default;
+$custom-toggle-checked-default-bg:      theme-color("default") !default;
+$custom-toggle-checked-danger-bg:      theme-color("danger") !default;
+$custom-toggle-checked-warning-bg:      theme-color("warning") !default;
+$custom-toggle-checked-success-bg:      theme-color("success") !default;
+$custom-toggle-checked-info-bg:      theme-color("info") !default;
 
 // Form validation
 

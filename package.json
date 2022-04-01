@@ -37,6 +37,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.3",
     "@reduxjs/toolkit": "^1.7.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.23",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
     "axios": "^0.24.0",
     "bootstrap": "4.6.0",
     "chart.js": "2.9.4",
@@ -71,6 +75,6 @@
   "optionalDependencies": {
     "eslint-plugin-flowtype": "5.8.0",
     "jquery": "3.6.0",
-    "typescript": "4.3.5"
+    "typescript": "^4.3.5"
   }
 }

@@ -12,7 +12,7 @@ import {
   Exchanges,
   News,
 } from "views/crypto";
-import TodoList from "views/todo/TodoList";
+import Portfolio from "./views/Management/Portfolio/Portfolio";
 
 var routes = [
   {
@@ -64,11 +64,13 @@ var routes = [
     layout: "/crypto",
     isCrypto: true,
   },
+
+  // Management routes
   {
-    path: "/todos",
-    name: "Todo List",
-    icon: "ni ni-bullet-list-67 text-green",
-    component: TodoList,
+    path: "/portfolio",
+    name: "Portfolio",
+    icon: "ni ni-single-copy-04 text-green",
+    component: Portfolio,
     layout: "/admin",
   },
   {

@@ -9,12 +9,14 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import getRoutes from "helpers/getRoutes";
+import getRoutesSideBar from "../helpers/getRoutesSideBar";
+import { ROUTE } from "../share/constants/routeConstants";
 
 const Admin = (props) => {
 
   // Filter route not show in sidebar
-  const routesSidebar = () => routes.filter(route => { return route.path === "/index" || (route.layout === "/crypto" && route.isCrypto)});
-  
+  const sidebarRoutes = getRoutesSideBar(routes, ROUTE.CRYPTO);
+
   const mainContent = React.useRef(null);
   const location = useLocation();
 
@@ -40,7 +42,7 @@ const Admin = (props) => {
     <>
       <Sidebar
         {...props}
-        routes={routesSidebar()}
+        routes={sidebarRoutes}
         // routes={routes}
         logo={{
           innerLink: "/admin/index",
@@ -54,7 +56,7 @@ const Admin = (props) => {
           brandText={getBrandText(props.location.pathname)}
         />
         <Switch>
-          {getRoutes(routes, "/crypto")}
+          {getRoutes(routes, ROUTE.CRYPTO_LAYOUT)}
           <Redirect from="*" to="/crypto" />
         </Switch>
         <Container fluid>

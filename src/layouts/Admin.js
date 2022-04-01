@@ -9,12 +9,13 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import getRoutes from "helpers/getRoutes";
+import getRoutesSideBar from "../helpers/getRoutesSideBar";
+import { ROUTE } from "../share/constants/routeConstants";
 
 const Admin = (props) => {
-
   // Filter route not show in sidebar
-  const routesSidebar = () => routes.filter(route => route.layout === '/admin' || route.path === '/home');
-  
+  const sidebarRoutes = getRoutesSideBar(routes, ROUTE.ADMIN);
+
   const mainContent = React.useRef(null);
   const location = useLocation();
 
@@ -40,7 +41,7 @@ const Admin = (props) => {
     <>
       <Sidebar
         {...props}
-        routes={routesSidebar()}
+        routes={sidebarRoutes}
         logo={{
           innerLink: "/admin/index",
           imgSrc: require("../assets/img/brand/argon-react.png").default,
@@ -53,7 +54,7 @@ const Admin = (props) => {
           brandText={getBrandText(props.location.pathname)}
         />
         <Switch>
-          {getRoutes(routes, "/admin")}
+          {getRoutes(routes, ROUTE.ADMIN_LAYOUT)}
           <Redirect from="*" to="/admin/index" />
         </Switch>
         <Container fluid>

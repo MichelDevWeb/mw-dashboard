@@ -34,6 +34,8 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { ROUTE } from "share/constants/routeConstants";
+import getRoutesSideBar from "helpers/getRoutesSideBar";
 
 var ps;
 
@@ -52,7 +54,12 @@ const Sidebar = (props) => {
     setCollapseOpen(false);
   };
   // creates the links that appear in the left menu / Sidebar
-  const createLinks = (routes) => {
+  const createLinks = (routes, isManagement) => {
+    // if (isManagement) {
+    //   routes = getRoutesSideBar(routes, ROUTE.MANAGEMENT);
+    //   console.log(routes)
+    // }
+
     return routes.map((prop, key) => {
       return (
         <NavItem key={key}>
@@ -219,9 +226,10 @@ const Sidebar = (props) => {
           {/* Divider */}
           <hr className="my-3" />
           {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>
+          <h6 className="navbar-heading text-muted">Management</h6>
           {/* Navigation */}
           <Nav className="mb-md-3" navbar>
+            {/* {createLinks(routes, true)} */}
             <NavItem>
               <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/overview?ref=adr-admin-sidebar">
                 <i className="ni ni-spaceship" />
